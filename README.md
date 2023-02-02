@@ -40,7 +40,7 @@ I created an SQL Database and a Flask Server to serve up the to-do list items ti
 ### Continued development
 
 I would love to work with the Due Date piece so that when the date has past, the text is red. And also having it be a date field in the form.
-I had a lot of trouble dealing with the datatypes as they get passed around the server. 
+I had a lot of trouble dealing with the datatypes as they get passed around the server. I'd also like to have the items display in order of due date. 
 
 ```python
 @app.route("/complete/<int:item_id>")
