@@ -34,7 +34,7 @@ def logged_in(f):
         if current_user.is_authenticated:
             return f(*args, **kwargs)
         else:
-            return redirect(url_for('login'))
+            return redirect(url_for('register'))
     return decorated_func
 
 
