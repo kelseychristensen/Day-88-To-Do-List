@@ -7,7 +7,7 @@ This is a to-do list website. </a></p>
 
 ## Links
 
-- [Repo](https://github.com/kelseychristensen/To-Do-List-Website "to-do-tool")
+- [Repo](https://github.com/kelseychristensen/Day-88-To-Do-List "to-do-tool")
 
 ## Screenshots
 
