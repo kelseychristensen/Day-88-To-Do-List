@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>To-Do List</title>
+
+    <!-- CSS -->
+  <link href="{{ url_for('static', filename='styles.css')}}" rel="stylesheet">
+
+
+    <!-- Bootstrap -->
+  <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Google Fonts -->
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/c3b019000f.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+
+<!-- NAV BAR -->
+
+<nav class="navbar-expand sticky-top navbar-light nav justify-content-end">
+  <div class="container-fluid">
+    <button class="navbar-toggler justify-content-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('home') }}">To-Do</a>
+        </li>
+          {% if not current_user.is_authenticated: %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('register') }}">Register</a>
+          </li>
+          {% else: %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('logout') }}">Log Out</a>
+          </li>
+              {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>

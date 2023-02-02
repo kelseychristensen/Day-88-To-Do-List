@@ -1,0 +1,103 @@
+html body {
+    width: 100%;
+}
+
+/*HEADER STYLE*/
+
+.navbar-expand {
+    background-color: #0f6674;
+}
+
+#navbarNav {
+    padding-right: 5%;
+}
+
+#navbarNav > ul > li > a {
+    color: white;
+}
+
+#navbarNav > ul > li > a:hover {
+    color: grey;
+}
+
+/*MAIN CONTENT STYLES */
+
+main {
+    padding: 5%;
+}
+
+.align-right-container {
+    text-align: right;
+}
+
+#portfolio > div.row > div > div > a > i {
+    color: #0f6674;
+    font-size: 1.2rem;
+    text-align: right;
+}
+
+#portfolio > div.align-right-container > div > a {
+    color: #0f6674;
+}
+
+#portfolio > div.align-right-container > div > a:hover {
+    color: gray;
+}
+
+#portfolio > div.row > div > div > a > i:hover {
+    color: gray;
+}
+
+#portfolio > div > div > a:link { text-decoration: none; }
+#portfolio > div > div > a:visited { text-decoration: none; }
+#portfolio > div > div > a:active { text-decoration: none; }
+#portfolio > div > div > a:hover { text-decoration: none;
+color: #0f6674}
+
+#portfolio > div.row > div {
+    margin: 1%;
+    padding: 3%;
+    box-shadow: 0px 0px 20px 5px rgb(0, 0, 0, 7%);
+}
+
+
+#portfolio > div.row > div h1 {
+    font-size: 1.5rem;
+}
+
+#portfolio > div.row > div h2 {
+    font-size: 1rem;
+}
+
+.red {
+    color: red;
+}
+
+/*COMPLETED STYLING*/
+
+.completed-item h1, .completed-item p, .fa-square-check {
+    color: lightgrey;
+}
+
+.completed-item h2, .completed-item p, .fa-square-check {
+    color: lightgrey;
+}
+
+.fa-square {
+    color: #0f6674;
+}
+
+/*FOOTER STYLE*/
+
+footer i {
+    padding: 5px;
+    color: black;
+}
+
+footer i:hover, footer a {
+    color: #0f6674;
+}
+
+footer a:hover {
+    color: grey;
+}

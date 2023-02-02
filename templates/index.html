@@ -1,0 +1,61 @@
+{% include "header.html" %}
+<!-- Portfolio-->
+
+<main>
+    <div class = "portfolio" id="portfolio">
+        <div class="align-right-container">
+            <div class="add-new"><a class="edit-button" href="{{url_for ('new_item') }}"><i class="fa-solid fa-circle-plus"></i> Add To-Do</a></div>
+            </div>
+    <h1>To-Do</h1>
+
+
+{% set rows = 6 %}
+{% set cols = 6 %}
+
+{% for item in all_items %}
+
+{% if loop.index0 // rows != (loop.index0 - 1) // rows %}
+<div class="row">
+{% endif %}
+
+
+<div class="col-lg-2 col-md-4 col-sm-12 col-xs-12">
+<div class="align-right-container">
+         <a class="edit-button" href="{{url_for ('edit_item', item_id=item.id) }}"><i class="fas fa-edit"></i></a>
+    </div>
+    <!--     INCOMPLETE ITEM-->
+         {% if item.status == 0 %}
+
+            <h1>{{item.title}}</h1>
+            <p>{{item.description}}</p>
+    <h2>Due: {{item.due_date}}</h2>
+                    {% else %}
+    <!--     COMPLETED ITEM-->
+            <div class="completed-item">
+                <h1>{{item.title}}</h1>
+                <p>All done!</p>
+            </div>
+                    {% endif %}
+         {% if item.status == 0 %}
+         <a class="fa-regular fa-square" href="{{url_for ('complete', item_id=item.id) }}"></i></a>
+         {% else %}
+         <a class="fa-regular fa-square-check" href="{{url_for ('undo_complete', item_id=item.id) }}"></a></a>
+        {% endif %}
+    </div>
+
+    {% if loop.index0 % cols  == 6 %}
+
+</div>
+{% endif %}
+
+
+     {% endfor %}
+
+
+
+
+
+
+</main>
+
+{% include "footer.html" %}
