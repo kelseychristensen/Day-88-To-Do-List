@@ -4,8 +4,8 @@ from wtforms.validators import DataRequired
 
 
 class CreateItemForm(FlaskForm):
-    title = StringField("Portfolio Item Title", validators=[DataRequired()])
-    description = TextAreaField("Portfolio Item Description", validators=[DataRequired()])
+    title = StringField("Title", validators=[DataRequired()])
+    description = TextAreaField("Description", validators=[DataRequired()])
     due_date = StringField("Due Date (mm/dd/yyyy)", validators=[DataRequired()])
     submit = SubmitField("Submit")
 
