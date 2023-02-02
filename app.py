@@ -28,6 +28,15 @@ login_manager.init_app(app)
 def load_user(user_id):
     return User.query.get(int(user_id))
 
+def logged_in(f):
+    @wraps(f)
+    def decorated_func(*args, **kwargs):
+        if current_user.is_authenticated:
+            return f(*args, **kwargs)
+        else:
+            return redirect(url_for('login'))
+    return decorated_func
+
 
 class User(UserMixin, db.Model):
     __tablename__ = "users"
@@ -111,6 +120,7 @@ def logout():
 
 
 @app.route("/new_item", methods=["GET", "POST"])
+@logged_in
 def new_item():
     form = CreateItemForm()
     if form.validate_on_submit():
