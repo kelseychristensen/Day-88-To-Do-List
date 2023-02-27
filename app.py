@@ -28,6 +28,7 @@ login_manager.init_app(app)
 def load_user(user_id):
     return User.query.get(int(user_id))
 
+
 def logged_in(f):
     @wraps(f)
     def decorated_func(*args, **kwargs):
