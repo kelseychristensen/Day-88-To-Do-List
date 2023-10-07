@@ -13,8 +13,6 @@ This is a to-do list website. </a></p>
 
 #### Full-Screen Width
 ![Full-Screen](/readme-images/full-screen.PNG "Full-Screen")
-#### Small Screen
-![Small-Screen](readme-images/small screen.PNG "Sm-Screen")
 #### Add an Item Form
 ![Add Item](/readme-images/add-item.PNG "Add")
 #### Edit Item Form
